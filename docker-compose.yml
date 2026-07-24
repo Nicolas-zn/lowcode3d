@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # 后端 API 服务
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    container_name: lowcode3d-backend
+    restart: unless-stopped
+    ports:
+      - "4000:4000"  # 暴露到宿主机，供外部 Nginx 代理
+    environment:
+      - NODE_ENV=production
+      - PORT=4000
+      - HOST=0.0.0.0
+      - JWT_SECRET=${JWT_SECRET:-change-this-secret-in-production}
+      - JWT_EXPIRES_IN=7d
+      - DATABASE_URL=/app/data/lowcode3d.db
+      - UPLOAD_DIR=/app/data/uploads
+      - PUBLIC_URL_BASE=/uploads
+      - MAX_FILE_SIZE=52428800
+      - CORS_ORIGIN=${CORS_ORIGIN:-https://editor3d.nicowebgl.cn}
+    volumes:
+      # 数据持久化
+      - lowcode3d-data:/app/data
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1:4000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  lowcode3d-data:
+    driver: local

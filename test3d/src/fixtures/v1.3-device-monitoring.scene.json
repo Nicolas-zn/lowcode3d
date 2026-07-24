@@ -1,0 +1,480 @@
+{
+  "version": "1.3.0",
+  "schemaVersion": "1.3.0",
+  "projectName": "v1.3_device_monitoring_acceptance",
+  "description": "device_monitoring: v1.3 runtime, data binding, event, animation and publish diagnostics acceptance scene.",
+  "createdAt": "2026-07-22T00:00:00.000Z",
+  "updatedAt": "2026-07-22T00:00:00.000Z",
+  "origin": {
+    "models": [
+      {
+        "id": "origin-device-glb",
+        "url": "/uploads/models/1769052006026-3n4127.glb",
+        "name": "Device GLB Model",
+        "category": "device"
+      }
+    ],
+    "textures": [],
+    "hdris": [
+      {
+        "id": "origin-hdri-studio",
+        "url": "https://threejs.org/examples/textures/equirectangular/royal_esplanade_1k.hdr",
+        "name": "Studio HDRI"
+      }
+    ]
+  },
+  "sceneObjects": [
+    {
+      "uuid": "device-body",
+      "name": "Device Body",
+      "type": "primitive",
+      "primitiveType": "box",
+      "primitiveParams": {
+        "width": 2.4,
+        "height": 1.4,
+        "depth": 1.6
+      },
+      "transform": {
+        "position": { "x": 0, "y": 0.7, "z": 0 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 1, "y": 1, "z": 1 }
+      },
+      "materialOverrides": {
+        "color": "#16a34a",
+        "metalness": 0.35,
+        "roughness": 0.42,
+        "opacity": 1,
+        "transparent": false,
+        "emissive": "#052e16",
+        "emissiveIntensity": 0.2
+      },
+      "visible": true,
+      "locked": false,
+      "userData": {
+        "selectable": true,
+        "component": {
+          "id": "component-device-body",
+          "type": "primitive",
+          "version": "1.0.0",
+          "objectUuid": "device-body",
+          "props": {
+            "label": "Device A-01",
+            "statusColor": "#16a34a"
+          },
+          "enabled": true
+        }
+      }
+    },
+    {
+      "uuid": "device-glb-model",
+      "name": "Device GLB Reference",
+      "type": "model",
+      "modelOriginId": "origin-device-glb",
+      "transform": {
+        "position": { "x": 0, "y": 0, "z": 0 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 0.03, "y": 0.03, "z": 0.03 }
+      },
+      "visible": true,
+      "locked": false,
+      "userData": {
+        "selectable": true,
+        "modelUrl": "/uploads/models/1769052006026-3n4127.glb"
+      }
+    },
+    {
+      "uuid": "poi-temperature",
+      "name": "POI Temperature",
+      "type": "primitive",
+      "primitiveType": "sphere",
+      "primitiveParams": {
+        "radius": 0.22,
+        "widthSegments": 24,
+        "heightSegments": 16
+      },
+      "transform": {
+        "position": { "x": -1.8, "y": 1.6, "z": 0.2 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 1, "y": 1, "z": 1 }
+      },
+      "materialOverrides": {
+        "color": "#38bdf8",
+        "metalness": 0.1,
+        "roughness": 0.3,
+        "opacity": 0.86,
+        "transparent": true,
+        "emissive": "#075985",
+        "emissiveIntensity": 0.4
+      },
+      "visible": true,
+      "locked": false,
+      "userData": {
+        "selectable": true,
+        "label": "温度 62°C",
+        "component": {
+          "id": "component-poi-temperature",
+          "type": "poi",
+          "version": "1.0.0",
+          "objectUuid": "poi-temperature",
+          "props": {
+            "label": "温度 62°C",
+            "statusColor": "#38bdf8"
+          },
+          "enabled": true
+        }
+      }
+    },
+    {
+      "uuid": "poi-status",
+      "name": "POI Status",
+      "type": "primitive",
+      "primitiveType": "sphere",
+      "primitiveParams": {
+        "radius": 0.22,
+        "widthSegments": 24,
+        "heightSegments": 16
+      },
+      "transform": {
+        "position": { "x": 1.8, "y": 1.6, "z": -0.2 },
+        "rotation": { "x": 0, "y": 0, "z": 0 },
+        "scale": { "x": 1, "y": 1, "z": 1 }
+      },
+      "materialOverrides": {
+        "color": "#f59e0b",
+        "metalness": 0.1,
+        "roughness": 0.3,
+        "opacity": 0.9,
+        "transparent": true,
+        "emissive": "#78350f",
+        "emissiveIntensity": 0.4
+      },
+      "visible": true,
+      "locked": false,
+      "userData": {
+        "selectable": true,
+        "label": "状态 WARNING",
+        "component": {
+          "id": "component-poi-status",
+          "type": "poi",
+          "version": "1.0.0",
+          "objectUuid": "poi-status",
+          "props": {
+            "label": "状态 WARNING",
+            "statusColor": "#f59e0b"
+          },
+          "enabled": true
+        }
+      }
+    }
+  ],
+  "components": [
+    {
+      "id": "component-device-body",
+      "type": "primitive",
+      "version": "1.0.0",
+      "objectUuid": "device-body",
+      "props": {
+        "label": "Device A-01",
+        "statusColor": "#16a34a"
+      },
+      "enabled": true
+    },
+    {
+      "id": "component-poi-temperature",
+      "type": "poi",
+      "version": "1.0.0",
+      "objectUuid": "poi-temperature",
+      "props": {
+        "label": "温度 62°C",
+        "statusColor": "#38bdf8"
+      },
+      "enabled": true
+    },
+    {
+      "id": "component-poi-status",
+      "type": "poi",
+      "version": "1.0.0",
+      "objectUuid": "poi-status",
+      "props": {
+        "label": "状态 WARNING",
+        "statusColor": "#f59e0b"
+      },
+      "enabled": true
+    }
+  ],
+  "lights": [
+    {
+      "uuid": "light-ambient",
+      "name": "Ambient Fill",
+      "type": "ambient",
+      "color": "#ffffff",
+      "intensity": 0.45
+    },
+    {
+      "uuid": "light-key",
+      "name": "Key Directional",
+      "type": "directional",
+      "color": "#ffffff",
+      "intensity": 1,
+      "position": { "x": 5, "y": 7, "z": 5 },
+      "target": { "x": 0, "y": 0.5, "z": 0 },
+      "castShadow": true
+    }
+  ],
+  "camera": {
+    "type": "perspective",
+    "position": { "x": 4.8, "y": 3.4, "z": 5.2 },
+    "target": { "x": 0, "y": 0.8, "z": 0 },
+    "near": 0.1,
+    "far": 2000,
+    "fov": 58
+  },
+  "cameraBookmarks": [
+    {
+      "id": "bookmark-overview",
+      "name": "总览",
+      "type": "perspective",
+      "position": { "x": 4.8, "y": 3.4, "z": 5.2 },
+      "target": { "x": 0, "y": 0.8, "z": 0 },
+      "near": 0.1,
+      "far": 2000,
+      "fov": 58,
+      "createdAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-07-22T00:00:00.000Z"
+    },
+    {
+      "id": "bookmark-device-close",
+      "name": "设备近景",
+      "type": "perspective",
+      "position": { "x": 2.8, "y": 2.2, "z": 2.6 },
+      "target": { "x": 0, "y": 0.8, "z": 0 },
+      "near": 0.1,
+      "far": 2000,
+      "fov": 46,
+      "createdAt": "2026-07-22T00:00:00.000Z",
+      "updatedAt": "2026-07-22T00:00:00.000Z"
+    }
+  ],
+  "environment": {
+    "backgroundColor": "#101827",
+    "backgroundType": "environment",
+    "hdriOriginId": "origin-hdri-studio",
+    "fog": {
+      "type": "linear",
+      "color": "#101827",
+      "near": 12,
+      "far": 48
+    }
+  },
+  "animations": {
+    "duration": 2,
+    "fps": 30,
+    "clips": [
+      {
+        "id": "device-pulse",
+        "name": "Device Pulse",
+        "duration": 2,
+        "loop": "pingPong",
+        "autoplay": false,
+        "enabled": true,
+        "trackIds": ["track-device-pulse"]
+      }
+    ],
+    "tracks": [
+      {
+        "id": "track-device-pulse",
+        "clipId": "device-pulse",
+        "uuid": "device-body",
+        "objectName": "Device Body",
+        "propertyName": "scale",
+        "targetRef": {
+          "objectUuid": "device-body"
+        },
+        "keyframes": [
+          { "time": 0, "value": [1, 1, 1], "propertyName": "scale" },
+          { "time": 1, "value": [1.08, 1.08, 1.08], "propertyName": "scale" },
+          { "time": 2, "value": [1, 1, 1], "propertyName": "scale" }
+        ],
+        "interpolation": 2300,
+        "easing": "easeInOut"
+      }
+    ]
+  },
+  "events": [
+    {
+      "id": "event-device-click",
+      "objectUuid": "device-body",
+      "trigger": "click",
+      "enabled": true,
+      "actions": [
+        {
+          "id": "action-camera-close",
+          "type": "switchCamera",
+          "payload": {
+            "bookmarkId": "bookmark-device-close"
+          },
+          "enabled": true
+        },
+        {
+          "id": "action-play-pulse",
+          "type": "playAnimation",
+          "payload": {
+            "clipId": "device-pulse"
+          },
+          "enabled": true
+        }
+      ]
+    }
+  ],
+  "dataSources": [
+    {
+      "id": "device-status",
+      "name": "设备状态",
+      "type": "staticJson",
+      "config": {
+        "value": {
+          "device": {
+            "status": "warning",
+            "statusColor": "#f59e0b",
+            "temperature": 62,
+            "alarm": true
+          }
+        }
+      },
+      "sampleData": {
+        "device": {
+          "status": "warning",
+          "statusColor": "#f59e0b",
+          "temperature": 62,
+          "alarm": true
+        }
+      },
+      "enabled": true
+    }
+  ],
+  "bindings": [
+    {
+      "id": "binding-device-status-color",
+      "objectUuid": "device-body",
+      "propertyPath": "material.color",
+      "sourceId": "device-status",
+      "dataPath": "device.status",
+      "transform": {
+        "type": "mapValue",
+        "options": {
+          "map": {
+            "normal": "#16a34a",
+            "warning": "#f59e0b",
+            "critical": "#dc2626"
+          }
+        }
+      },
+      "fallbackValue": "#16a34a",
+      "enabled": true
+    },
+    {
+      "id": "binding-temperature-label",
+      "objectUuid": "poi-temperature",
+      "propertyPath": "userData.label",
+      "sourceId": "device-status",
+      "dataPath": "device.temperature",
+      "transform": {
+        "type": "formatText",
+        "options": {
+          "template": "温度 {value}°C"
+        }
+      },
+      "fallbackValue": "温度 --°C",
+      "enabled": true
+    },
+    {
+      "id": "binding-status-label",
+      "objectUuid": "poi-status",
+      "propertyPath": "component.props.label",
+      "sourceId": "device-status",
+      "dataPath": "device.status",
+      "transform": {
+        "type": "formatText",
+        "options": {
+          "template": "状态 {value}"
+        }
+      },
+      "fallbackValue": "状态 unknown",
+      "enabled": true
+    }
+  ],
+  "runtimeConfig": {
+    "controls": { "enabled": true },
+    "animations": { "autoplay": false },
+    "events": { "enabled": true },
+    "data": {
+      "enabled": true,
+      "useSampleDataInEditor": true
+    }
+  },
+  "postProcessing": {
+    "enabled": true,
+    "bloom": {
+      "enabled": true,
+      "strength": 0.42,
+      "radius": 0.34,
+      "threshold": 0.78
+    },
+    "outline": {
+      "enabled": true,
+      "color": "#38bdf8",
+      "thickness": 2
+    },
+    "smaa": {
+      "enabled": true
+    },
+    "toneMapping": {
+      "type": "aces",
+      "exposure": 1.02
+    }
+  },
+  "publishConfig": {
+    "embedDefaults": {
+      "toolbar": false,
+      "controls": true,
+      "transparent": false,
+      "autoplay": false
+    },
+    "runtimeVersion": "1.3.0"
+  },
+  "assetManifest": {
+    "generatedAt": "2026-07-22T00:00:00.000Z",
+    "items": [
+      {
+        "id": "origin-device-glb",
+        "type": "model",
+        "name": "Device GLB Model",
+        "url": "/uploads/models/1769052006026-3n4127.glb",
+        "fileSize": 12000000,
+        "mimeType": "model/gltf-binary",
+        "source": "origin",
+        "usage": ["scene"],
+        "referencedBy": ["device-glb-model"],
+        "requiredForPublish": true,
+        "status": "ready",
+        "publicAccess": "unknown",
+        "corsStatus": "unknown"
+      },
+      {
+        "id": "origin-hdri-studio",
+        "type": "hdri",
+        "name": "Studio HDRI",
+        "url": "https://threejs.org/examples/textures/equirectangular/royal_esplanade_1k.hdr",
+        "fileSize": 1600000,
+        "mimeType": "image/vnd.radiance",
+        "source": "environment",
+        "usage": ["environment"],
+        "referencedBy": [],
+        "requiredForPublish": true,
+        "status": "ready",
+        "publicAccess": "public",
+        "corsStatus": "ok"
+      }
+    ]
+  }
+}

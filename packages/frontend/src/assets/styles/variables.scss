@@ -1,0 +1,50 @@
+// ===========================
+// 设计令牌 (Design Tokens)
+// ===========================
+
+// 颜色
+$--color-primary: #4f8cff !default;
+$--color-primary-light: #6ea1ff !default;
+$--color-primary-dark: #3f76db !default;
+$--color-success: #35c46b !default;
+$--color-warning: #f5a524 !default;
+$--color-danger: #ff5c5c !default;
+$--color-info: #909399 !default;
+
+// 深色主题
+$--bg-color-dark: #1b1f26 !default;
+$--bg-color-darker: #0f1115 !default;
+$--bg-color-light: #222832 !default;
+$--bg-color-hover: #343b47 !default;
+
+$--text-color-primary: #eef2f7 !default;
+$--text-color-secondary: #aab3c2 !default;
+$--text-color-placeholder: #737f91 !default;
+
+$--border-color: #2a3038 !default;
+$--border-color-light: #3a4350 !default;
+
+// 尺寸
+$--header-height: 56px !default;
+$--sidebar-width: 280px !default;
+$--properties-width: 320px !default;
+$--bottom-panel-height: 240px !default;
+
+// 圆角
+$--border-radius-small: 4px !default;
+$--border-radius-base: 6px !default;
+$--border-radius-large: 8px !default;
+
+// 阴影
+$--box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.3) !default;
+$--box-shadow-light: 0 1px 4px rgba(0, 0, 0, 0.2) !default;
+
+// 动画
+$--transition-base: all 0.2s ease !default;
+$--transition-fast: all 0.1s ease !default;
+
+// Z-index 层级
+$--zindex-toolbar: 100 !default;
+$--zindex-sidebar: 90 !default;
+$--zindex-dialog: 1000 !default;
+$--zindex-tooltip: 1100 !default;

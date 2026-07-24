@@ -1,0 +1,28 @@
+{
+  "name": "@lowcode3d/runtime",
+  "version": "0.2.4",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm",
+    "build:dts": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --watch",
+    "test": "pnpm run build && node tests/project-runtime.test.mjs && node tests/component-registry.test.mjs && node tests/component-protocol.test.mjs && node tests/runtime-events.test.mjs && node tests/runtime-data.test.mjs && node tests/runtime-animation.test.mjs && node tests/runtime-materials.test.mjs && node tests/runtime-selection.test.mjs && node tests/runtime-export.test.mjs && node tests/runtime-stage8.test.mjs"
+  },
+  "dependencies": {
+    "@lowcode3d/shared": "^0.1.0",
+    "@tweenjs/tween.js": "^21.1.1",
+    "gsap": "^3.12.5",
+    "postprocessing": "^6.38.2",
+    "three": "^0.162.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.162.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2"
+  }
+}

@@ -1,0 +1,93 @@
+// lowcode3D v1.2 editor design tokens
+
+:root {
+  --lc-bg-app: #0f1115;
+  --lc-bg-canvas: #15181d;
+  --lc-bg-panel: #1b1f26;
+  --lc-bg-panel-raised: #222832;
+  --lc-bg-control: #2a303a;
+  --lc-bg-control-hover: #343b47;
+  --lc-bg-control-active: #3d4654;
+
+  --lc-border-subtle: #2a3038;
+  --lc-border-strong: #3a4350;
+  --lc-border-focus: #4f8cff;
+
+  --lc-text-primary: #eef2f7;
+  --lc-text-secondary: #aab3c2;
+  --lc-text-muted: #737f91;
+  --lc-text-disabled: #4f5866;
+  --lc-text-inverse: #0f1115;
+
+  --lc-accent: #4f8cff;
+  --lc-accent-hover: #6ea1ff;
+  --lc-accent-active: #3f76db;
+  --lc-selection-bg: rgba(79, 140, 255, 0.18);
+  --lc-selection-border: #4f8cff;
+
+  --lc-success: #35c46b;
+  --lc-warning: #f5a524;
+  --lc-error: #ff5c5c;
+  --lc-info: #4f8cff;
+  --lc-local: #b77cff;
+
+  --lc-axis-x: #ff5c5c;
+  --lc-axis-y: #35c46b;
+  --lc-axis-z: #4f8cff;
+
+  --lc-space-1: 4px;
+  --lc-space-2: 8px;
+  --lc-space-3: 12px;
+  --lc-space-4: 16px;
+  --lc-space-5: 20px;
+  --lc-space-6: 24px;
+
+  --lc-radius-sm: 4px;
+  --lc-radius-md: 6px;
+  --lc-radius-lg: 8px;
+
+  --lc-toolbar-height: 56px;
+  --lc-message-offset-y: 52px;
+  --lc-left-nav-width: 48px;
+  --lc-left-panel-width: 280px;
+  --lc-right-panel-width: 320px;
+  --lc-bottom-dock-height: 240px;
+  --lc-panel-header-height: 42px;
+  --lc-panel-section-header-height: 36px;
+  --lc-panel-row-height: 30px;
+  --lc-panel-padding-x: 12px;
+  --lc-panel-padding-y: 10px;
+  --lc-icon-size-xs: 14px;
+  --lc-icon-size-sm: 16px;
+  --lc-icon-size-md: 18px;
+  --lc-icon-size-lg: 20px;
+  --lc-control-height-sm: 28px;
+  --lc-control-height-md: 32px;
+  --lc-panel-nav-active-bg: rgba(79, 140, 255, 0.12);
+  --lc-panel-nav-hover-bg: rgba(255, 255, 255, 0.06);
+  --lc-panel-section-bg: rgba(255, 255, 255, 0.02);
+
+  --lc-shadow-floating: 0 8px 24px rgba(0, 0, 0, 0.28);
+  --lc-shadow-dialog: 0 16px 48px rgba(0, 0, 0, 0.36);
+
+  --lc-font-sans: 'Inter', 'SF Pro Text', 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  --lc-font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+}
+
+html.light {
+  --lc-bg-app: #f6f8fb;
+  --lc-bg-canvas: #e8eaed;
+  --lc-bg-panel: #ffffff;
+  --lc-bg-panel-raised: #ffffff;
+  --lc-bg-control: #f0f3f8;
+  --lc-bg-control-hover: #e5eaf2;
+  --lc-bg-control-active: #dbe3ee;
+
+  --lc-border-subtle: #d9dee7;
+  --lc-border-strong: #c4ccd8;
+
+  --lc-text-primary: #1c2430;
+  --lc-text-secondary: #596579;
+  --lc-text-muted: #8490a3;
+  --lc-text-disabled: #b4bdca;
+}

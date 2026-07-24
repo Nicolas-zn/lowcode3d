@@ -1,0 +1,48 @@
+{
+  "name": "lowcode3d",
+  "version": "0.1.2",
+  "private": true,
+  "description": "A commercial-grade low-code 3D scene editor based on Three.js",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @lowcode3d/frontend dev",
+    "dev:backend": "pnpm --filter @lowcode3d/backend dev",
+    "dev:all": "concurrently \"pnpm dev\" \"pnpm dev:backend\"",
+    "build": "pnpm --filter @lowcode3d/frontend build",
+    "build:backend": "pnpm --filter @lowcode3d/backend build",
+    "sync:engine": "node scripts/sync-engine.cjs",
+    "build:runtime": "pnpm sync:engine && pnpm --filter @lowcode3d/runtime build",
+    "build:packages": "pnpm sync:engine && pnpm --filter @lowcode3d/runtime build && pnpm --filter @lowcode3d/vue3 build && pnpm --filter @lowcode3d/vue2 build && pnpm --filter @lowcode3d/react build",
+    "publish:packages": "node scripts/publish-packages.cjs",
+    "release": "node scripts/publish-packages.cjs",
+    "lint": "eslint packages --ext .ts,.tsx,.vue --fix",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,vue,json,css,scss}\"",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.22.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2",
+    "vue-eslint-parser": "^10.2.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

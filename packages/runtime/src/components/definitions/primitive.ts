@@ -1,0 +1,53 @@
+import type { ComponentDefinition } from '@lowcode3d/shared'
+
+export const primitiveComponentDefinition: ComponentDefinition = {
+  type: 'primitive',
+  title: '基础几何体',
+  category: 'basic',
+  version: '1.0.0',
+  capabilities: ['renderable', 'bindable', 'animatable', 'interactive', 'publishable'],
+  defaultProps: {
+    primitiveType: 'box',
+    width: 1,
+    height: 1,
+    depth: 1,
+    radius: 0.5,
+    color: '#409eff',
+  },
+  properties: [
+    {
+      key: 'primitiveType',
+      label: '几何体类型',
+      type: 'select',
+      group: '基础',
+      defaultValue: 'box',
+      required: true,
+      options: [
+        { label: '立方体', value: 'box' },
+        { label: '球体', value: 'sphere' },
+        { label: '圆柱体', value: 'cylinder' },
+        { label: '圆锥体', value: 'cone' },
+        { label: '圆环', value: 'torus' },
+        { label: '平面', value: 'plane' },
+        { label: '圆片', value: 'circle' },
+        { label: '圆环片', value: 'ring' },
+        { label: '四面体', value: 'tetrahedron' },
+        { label: '八面体', value: 'octahedron' },
+        { label: '二十面体', value: 'icosahedron' },
+        { label: '十二面体', value: 'dodecahedron' },
+      ],
+    },
+    { key: 'width', label: '宽度', type: 'number', group: '尺寸', defaultValue: 1, min: 0.01 },
+    { key: 'height', label: '高度', type: 'number', group: '尺寸', defaultValue: 1, min: 0.01 },
+    { key: 'depth', label: '深度', type: 'number', group: '尺寸', defaultValue: 1, min: 0.01 },
+    { key: 'radius', label: '半径', type: 'number', group: '尺寸', defaultValue: 0.5, min: 0.01 },
+    {
+      key: 'color',
+      label: '颜色',
+      type: 'color',
+      group: '材质',
+      defaultValue: '#409eff',
+      bindable: true,
+    },
+  ],
+}

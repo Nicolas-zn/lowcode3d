@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+dist
+build
+*.tsbuildinfo
+editor3d.tar.gz
+packages/frontend/editor3d/*
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Env files
+# .env
+.env.local
+.env.*.local
+
+# Test coverage
+coverage
+
+# Cache
+.cache
+.turbo
+
+
+.vitepress
+
+*.sh
+readme/
+packages/frontend/roadmap/

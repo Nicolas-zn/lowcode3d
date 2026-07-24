@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@lowcode3d/shared": ["../shared/src"]
+    },
+    "types": ["vite/client"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "env.d.ts", "../shared/src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

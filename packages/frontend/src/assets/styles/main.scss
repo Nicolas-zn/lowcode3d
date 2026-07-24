@@ -1,0 +1,332 @@
+@import './tokens.scss';
+@import './variables.scss';
+
+// ===========================
+// 全局重置与基础样式
+// ===========================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: var(--lc-font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  user-select: none;
+}
+
+// ===========================
+// 暗黑模式增强（基于 Element Plus 暗黑模式）
+// ===========================
+
+html.dark {
+  // 编辑器专用背景色（比 Element Plus 默认更深）
+  --editor-bg-primary: var(--lc-bg-panel);
+  --editor-bg-secondary: var(--lc-bg-app);
+  --editor-bg-tertiary: #0a0c10;
+
+  // 编辑器组件背景
+  .toolbar,
+  .left-sidebar,
+  .right-sidebar,
+  .bottom-panel {
+    background-color: var(--lc-bg-panel);
+  }
+
+  .editor-layout {
+    background-color: var(--editor-bg-tertiary);
+  }
+
+  // 选项卡增强
+  .el-tabs__item {
+    &.is-active {
+      font-weight: 600;
+    }
+  }
+
+  // 树选中状态增强
+  .el-tree-node.is-current > .el-tree-node__content {
+    background-color: var(--el-color-primary-light-9) !important;
+    border-left: 2px solid var(--el-color-primary);
+  }
+
+  // 折叠面板标题
+  .el-collapse-item__header {
+    font-weight: 500;
+
+    &.is-active {
+      color: var(--el-color-primary);
+    }
+  }
+}
+
+// ===========================
+// 浅色模式
+// ===========================
+
+html.light {
+  --editor-bg-primary: var(--lc-bg-panel);
+  --editor-bg-secondary: var(--lc-bg-app);
+  --editor-bg-tertiary: #e5e9f0;
+
+  .toolbar,
+  .left-sidebar,
+  .right-sidebar,
+  .bottom-panel {
+    background-color: var(--el-bg-color);
+  }
+
+  .editor-layout {
+    background-color: var(--editor-bg-tertiary);
+  }
+}
+
+// ===========================
+// 滚动条样式
+// ===========================
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: var(--el-bg-color-page);
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: var(--el-border-color);
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--el-border-color-darker);
+  }
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: var(--el-fill-color-light);
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: var(--el-border-color);
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--el-border-color-dark);
+  }
+}
+
+// 选中样式
+::selection {
+  background-color: var(--el-color-primary);
+  color: #fff;
+}
+
+// Element Plus Message 默认距离视口顶部较近，在编辑器里容易压到 Toolbar。
+// 使用 transform 额外下移，保留组件自身 top 堆叠逻辑，连续消息不会重叠。
+.el-message {
+  transform: translate(-50%, var(--lc-message-offset-y)) !important;
+}
+
+// 链接
+a {
+  color: var(--el-color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--el-color-primary-light-3);
+  }
+}
+
+// 按钮重置
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+.el-button:focus-visible,
+.el-input__wrapper.is-focus,
+.el-select .el-input.is-focus .el-input__wrapper {
+  outline: 1px solid var(--lc-border-focus);
+  outline-offset: 1px;
+}
+
+// 输入框重置
+input,
+textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+// ===========================
+// 工具类
+// ===========================
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ===========================
+// Element Plus 全局覆盖
+// ===========================
+
+.el-button {
+  font-weight: 500;
+  border-radius: var(--lc-radius-md);
+}
+
+.lc-panel-surface {
+  background: var(--lc-bg-panel);
+  border-color: var(--lc-border-subtle);
+  color: var(--lc-text-primary);
+}
+
+body.is-resizing-editor-panel-col,
+body.is-resizing-editor-panel-row {
+  user-select: none;
+
+  * {
+    user-select: none !important;
+  }
+}
+
+body.is-resizing-editor-panel-col {
+  cursor: col-resize;
+}
+
+body.is-resizing-editor-panel-row {
+  cursor: row-resize;
+}
+
+// Tooltip 样式
+html.dark .el-popper.is-dark {
+  background: var(--el-bg-color-overlay) !important;
+  border-color: var(--el-border-color) !important;
+}
+
+html.dark .el-popper.is-dark .el-popper__arrow::before {
+  background: var(--el-bg-color-overlay) !important;
+  border-color: var(--el-border-color) !important;
+}
+
+// Slider Tooltip 样式 (暗黑模式)
+html.dark .el-slider__button-wrapper {
+  .el-tooltip__trigger {
+    border-color: var(--el-color-primary);
+  }
+}
+
+// Slider Tooltip Popper (挂载在 body 上)
+html.dark {
+  .el-slider__marks-text {
+    color: var(--el-text-color-regular);
+  }
+}
+
+// 修复 Slider Tooltip 在暗黑模式下的显示问题
+.el-popper.el-slider__runway-popup {
+  html.dark & {
+    background: var(--el-bg-color-overlay);
+    color: var(--el-text-color-primary);
+  }
+}
+
+// 全局 Tooltip (包括 Slider 的) 暗黑模式修复
+body.dark .el-popper,
+html.dark .el-popper:not(.is-light) {
+  &[role='tooltip'] {
+    background: #303133 !important;
+    color: #ffffff !important;
+    border: 1px solid #4c4d4f !important;
+  }
+
+  .el-popper__arrow::before {
+    background: #303133 !important;
+    border-color: #4c4d4f !important;
+  }
+}
+
+// 专门针对 Slider tooltip 的暗黑模式样式
+html.dark .el-slider__button {
+  border-color: var(--el-color-primary);
+  background-color: var(--el-color-primary);
+}
+
+// 确保 tooltip 在暗黑模式下可见
+html.dark {
+  // Slider tooltip 背景
+  .el-tooltip__popper.is-dark,
+  .el-tooltip__popper[data-popper-placement] {
+    background: #303133 !important;
+    color: #ffffff !important;
+    border: 1px solid #4c4d4f !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+
+    .el-popper__arrow::before {
+      background: #303133 !important;
+      border-color: #4c4d4f !important;
+    }
+  }
+}
+
+// ===========================
+// 编辑器特定样式
+// ===========================
+
+// 选中项增强样式
+.is-selected,
+[data-selected='true'] {
+  background-color: var(--el-color-primary-light-9) !important;
+  border-color: var(--el-color-primary) !important;
+}
+
+// 分组标题样式
+.group-title,
+.category-title,
+.section-title {
+  color: var(--el-text-color-regular);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

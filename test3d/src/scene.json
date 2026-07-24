@@ -1,0 +1,465 @@
+{
+  "version": "1.0.0",
+  "projectName": "nico",
+  "description": "",
+  "createdAt": "2026-01-22T08:01:46.484Z",
+  "updatedAt": "2026-01-22T08:01:46.484Z",
+  "origin": {
+    "models": [
+      {
+        "id": "origin_1_1769068906484",
+        "url": "/uploads/models/1769052006026-3n4127.glb",
+        "name": "1769052006026-3n4127"
+      }
+    ],
+    "textures": [],
+    "hdris": []
+  },
+  "sceneObjects": [
+    {
+      "uuid": "083d8cd5-ea6e-4eca-93ee-9b5e920f1b06",
+      "name": "Box_1",
+      "type": "primitive",
+      "transform": {
+        "position": {
+          "x": 0,
+          "y": 0.5,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "visible": true,
+      "locked": false,
+      "userData": {
+        "selectable": true
+      },
+      "primitiveType": "box",
+      "primitiveParams": {
+        "width": 1,
+        "height": 1,
+        "depth": 1
+      },
+      "materialOverrides": {
+        "color": "#409eff",
+        "metalness": 0.2,
+        "roughness": 0.5,
+        "opacity": 1,
+        "transparent": false,
+        "emissive": "#000000",
+        "emissiveIntensity": 1
+      }
+    },
+    {
+      "uuid": "b93d85bf-27ff-4cce-9781-292312f574de",
+      "name": "Sphere_2",
+      "type": "primitive",
+      "transform": {
+        "position": {
+          "x": 2,
+          "y": 0.5,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "visible": true,
+      "locked": false,
+      "userData": {
+        "selectable": true
+      },
+      "primitiveType": "sphere",
+      "primitiveParams": {
+        "radius": 0.5,
+        "widthSegments": 32,
+        "heightSegments": 32
+      },
+      "materialOverrides": {
+        "color": "#67c23a",
+        "metalness": 0.2,
+        "roughness": 0.5,
+        "opacity": 1,
+        "transparent": false,
+        "emissive": "#000000",
+        "emissiveIntensity": 1
+      }
+    },
+    {
+      "uuid": "0be1694b-e64e-4b45-aa50-3ec0e504ed85",
+      "name": "Cylinder_3",
+      "type": "primitive",
+      "transform": {
+        "position": {
+          "x": -2,
+          "y": 0.5,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "visible": true,
+      "locked": false,
+      "userData": {
+        "selectable": true
+      },
+      "primitiveType": "cylinder",
+      "primitiveParams": {
+        "radiusTop": 0.4,
+        "radiusBottom": 0.4,
+        "height": 1,
+        "radialSegments": 32
+      },
+      "materialOverrides": {
+        "color": "#e6a23c",
+        "metalness": 0.2,
+        "roughness": 0.5,
+        "opacity": 1,
+        "transparent": false,
+        "emissive": "#000000",
+        "emissiveIntensity": 1
+      }
+    },
+    {
+      "uuid": "bc0343a6-d341-4b02-a49f-6e6e48a7d7c2",
+      "name": "nicologo",
+      "type": "billboard",
+      "transform": {
+        "position": {
+          "x": 2.4855694099540724,
+          "y": 7.953709630651404,
+          "z": 1.011341581810182
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9792915677951071,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "visible": true,
+      "locked": false,
+      "userData": {
+        "selectable": true,
+        "isBillboard": true,
+        "billboardData": {
+          "mode": "Y_LOCK",
+          "animation": "FLOAT",
+          "repeat": [1, 1],
+          "isVideo": false,
+          "size": [2, 2],
+          "texture": "/uploads/textures/1768913421948-qmvjf7.png",
+          "backTexture": "/uploads/textures/1768913421948-qmvjf7.png"
+        },
+        "billboardMode": "Y_LOCK",
+        "billboardAnimation": "FLOAT"
+      },
+      "billboardData": {
+        "mode": "Y_LOCK",
+        "animation": "FLOAT",
+        "repeat": [1, 1],
+        "isVideo": false,
+        "size": [2, 2],
+        "texture": "/uploads/textures/1768913421948-qmvjf7.png",
+        "backTexture": "/uploads/textures/1768913421948-qmvjf7.png"
+      }
+    },
+    {
+      "uuid": "57d7bd20-c5a4-4433-af32-969aa80dcebb",
+      "name": "nicologo",
+      "type": "billboard",
+      "transform": {
+        "position": {
+          "x": -5.560390208273745,
+          "y": 1.1683437704844093,
+          "z": -9.5
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9723645188063422,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "visible": true,
+      "locked": false,
+      "userData": {
+        "selectable": true,
+        "isBillboard": true,
+        "billboardData": {
+          "mode": "Y_LOCK",
+          "animation": "FLOAT",
+          "repeat": [1, 1],
+          "isVideo": false,
+          "size": [2, 2],
+          "texture": "/uploads/textures/1768913421948-qmvjf7.png",
+          "backTexture": "/uploads/textures/1768913421948-qmvjf7.png"
+        },
+        "billboardMode": "Y_LOCK",
+        "billboardAnimation": "FLOAT"
+      },
+      "billboardData": {
+        "mode": "Y_LOCK",
+        "animation": "FLOAT",
+        "repeat": [1, 1],
+        "isVideo": false,
+        "size": [2, 2],
+        "texture": "/uploads/textures/1768913421948-qmvjf7.png",
+        "backTexture": "/uploads/textures/1768913421948-qmvjf7.png"
+      }
+    },
+    {
+      "uuid": "e70f005b-4b3a-4de0-9554-ce5cd335fa61",
+      "name": "building-alt1",
+      "type": "billboard",
+      "transform": {
+        "position": {
+          "x": 9.048442556809901,
+          "y": 2.336771241020865,
+          "z": 0.5
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0.9724189596923223,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "visible": true,
+      "locked": false,
+      "userData": {
+        "selectable": true,
+        "isBillboard": true,
+        "billboardData": {
+          "mode": "Y_LOCK",
+          "animation": "NONE",
+          "repeat": [1, 1],
+          "isVideo": false,
+          "size": [2, 2],
+          "texture": "/uploads/icons/1768974015960-890j0f.svg"
+        },
+        "billboardMode": "Y_LOCK"
+      },
+      "billboardData": {
+        "mode": "Y_LOCK",
+        "animation": "NONE",
+        "repeat": [1, 1],
+        "isVideo": false,
+        "size": [2, 2],
+        "texture": "/uploads/icons/1768974015960-890j0f.svg"
+      }
+    },
+    {
+      "uuid": "750bccf0-6bef-47f8-bd0a-1687e6f13399",
+      "name": "buildings",
+      "type": "model",
+      "transform": {
+        "position": {
+          "x": 13,
+          "y": 30.419629216194153,
+          "z": 0
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      },
+      "visible": true,
+      "locked": false,
+      "userData": {
+        "selectable": true,
+        "modelUrl": "/uploads/models/1769052006026-3n4127.glb"
+      },
+      "modelOriginId": "origin_1_1769068906484",
+      "children": [
+        {
+          "name": "1_12",
+          "type": "mesh",
+          "transform": {
+            "position": {
+              "x": 228.2691821979452,
+              "y": 160.1271766673264,
+              "z": 2.4912314414978027
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 5.676340345180562,
+              "y": 1.7126293410510587,
+              "z": 1
+            }
+          },
+          "visible": true,
+          "locked": false,
+          "userData": {
+            "path": "1_12"
+          },
+          "uuid": ""
+        },
+        {
+          "name": "2_09",
+          "type": "mesh",
+          "transform": {
+            "position": {
+              "x": 210.24171447753906,
+              "y": -2.1398658752441406,
+              "z": 3.3301291465759277
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1.8359095691572693,
+              "z": 1
+            }
+          },
+          "visible": true,
+          "locked": false,
+          "userData": {
+            "path": "2_09"
+          },
+          "uuid": "",
+          "materialOverrides": {
+            "color": "#f1c40f",
+            "metalness": 0,
+            "roughness": 0.5,
+            "opacity": 1,
+            "transparent": false,
+            "emissive": "#000000",
+            "emissiveIntensity": 0
+          }
+        },
+        {
+          "name": "3_01",
+          "type": "mesh",
+          "transform": {
+            "position": {
+              "x": 96.4977034828417,
+              "y": 72.24371503642911,
+              "z": 189.0070343017578
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            }
+          },
+          "visible": true,
+          "locked": false,
+          "userData": {
+            "path": "3_01"
+          },
+          "uuid": "",
+          "materialOverrides": {
+            "color": "#3498db",
+            "metalness": 0,
+            "roughness": 0.5,
+            "opacity": 1,
+            "transparent": false,
+            "emissive": "#000000",
+            "emissiveIntensity": 0
+          }
+        }
+      ]
+    }
+  ],
+  "lights": [
+    {
+      "uuid": "5016d563-d11b-4a66-80d9-64c317df2e4d",
+      "name": "DefaultAmbientLight",
+      "type": "ambient",
+      "color": "#ffffff",
+      "intensity": 0.4
+    },
+    {
+      "uuid": "a7722234-8852-4fb1-a81f-0ec553d51fe1",
+      "name": "DefaultDirectionalLight",
+      "type": "directional",
+      "color": "#ffffff",
+      "intensity": 0.8,
+      "position": {
+        "x": 10,
+        "y": 15,
+        "z": 10
+      },
+      "target": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "castShadow": true
+    }
+  ],
+  "camera": {
+    "type": "perspective",
+    "position": {
+      "x": 500.04546616441746,
+      "y": 320.42943027315334,
+      "z": 335.24083092344677
+    },
+    "target": {
+      "x": 118.21242856979372,
+      "y": 57.86014175415038,
+      "z": 147.46197128295898
+    },
+    "near": 0.1,
+    "far": 2000,
+    "fov": 60
+  },
+  "environment": {
+    "backgroundColor": "#1a1a2e",
+    "backgroundType": "color"
+  }
+}

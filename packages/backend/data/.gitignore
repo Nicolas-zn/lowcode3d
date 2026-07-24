@@ -1,0 +1,11 @@
+# Ignore all files
+*
+# But not .gitkeep and .gitignore
+!.gitkeep
+!.gitignore
+!uploads/
+uploads/*
+!uploads/.gitkeep
+!uploads/*/
+uploads/*/**
+!uploads/*/.gitkeep
